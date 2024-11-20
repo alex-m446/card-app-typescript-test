@@ -38,7 +38,7 @@ server.post<{ Body: Entry }>("/create/", async (req, reply) => {
     reply.send(createdEntryData);
   } catch {
     //reply.status(500).send({ msg: "Error creating entry", newEntryBody});
-    reply.status(500).send({newEntryBody});
+    reply.status(500).send({msg: "Error creating entry"});
   }
 });
 
